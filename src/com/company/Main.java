@@ -40,7 +40,6 @@ public class Main {
             System.out.printf("%s - %s\n", i, roomTypes.get(i));
         }
 
-        System.out.println("hello");
         System.out.println();
         System.out.println("Please enter a number corresponding to your preferred room type:");
 
