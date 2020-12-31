@@ -1,16 +1,16 @@
 package com.robin.hoteless.Model;
 
 public class Room {
-    private float price;
+    private double price;
     private String bed;
     private int nubmerOfBeds;
     private boolean hasKitchenette;
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public Room setPrice(float price) {
+    public Room setPrice(double price) {
         this.price = price;
         return this;
     }
@@ -33,7 +33,7 @@ public class Room {
         return this;
     }
 
-    public boolean isHasKitchenette() {
+    public boolean hasKitchenette() {
         return hasKitchenette;
     }
 
