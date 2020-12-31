@@ -1,4 +1,4 @@
-package com.company;
+package com.robin.hoteless;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
