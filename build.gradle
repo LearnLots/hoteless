@@ -1,0 +1,55 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+buildscript {
+    ext {
+        // single point for defining all the versions of dependencies for all subprojects
+
+        // spring
+        springBootVersion = '2.3.5.RELEASE'
+        springCloudAwsMessagingVersion = '2.2.5.RELEASE'
+        springDocVersion='1.4.8'
+
+        // AWS
+        awsJavaSdkVersion = '1.11.899'
+
+        // third-party core libs
+        jacksonVersion = '2.11.3'
+
+        // testing
+        junitVersion = '5.6.3'
+        hamcrestVersion = '2.2'
+        pojotVersion = '1.3'
+        awaitilityVersion = '4.0.3'
+        mockitoVersion = '3.6.0'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        // the buildscript dependencies are only resolve by the root project, so add all deps here for subprojects
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+
+}
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'java'
+    apply plugin: 'application'
+    apply plugin: 'jacoco'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+
+    group 'com.jinx.learning'
+    mainClassName = 'com.company.Main.java'
+
+
+    repositories {
+        mavenCentral()
+    }
+}
