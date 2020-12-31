@@ -1,5 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'application'
+apply plugin: 'jacoco'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.springframework.boot'
+
+group 'com.jinx.learning'
+mainClassName = 'com.robin.hoteless.Application'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 buildscript {
     ext {
@@ -32,24 +43,13 @@ buildscript {
         // the buildscript dependencies are only resolve by the root project, so add all deps here for subprojects
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     }
-
 }
-allprojects {
-    apply plugin: 'eclipse'
-    apply plugin: 'idea'
-    apply plugin: 'java'
-    apply plugin: 'application'
-    apply plugin: 'jacoco'
-    apply plugin: 'io.spring.dependency-management'
 
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-actuator')
+}
 
-    group 'com.jinx.learning'
-    mainClassName = 'com.robin.hoteless.Main.java'
-
-
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
 }

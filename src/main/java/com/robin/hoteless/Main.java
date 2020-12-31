@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        bookRoom();
-    }
+//    public static void main(String[] args) {
+//        bookRoom();
+//    }
 
     public static void bookRoom() {
         Double bedCost;
@@ -85,7 +85,7 @@ public class Main {
         } while (parseError);
 
         // compute checkOut date
-        LocalDate checkOut = IncrementDate(checkIn, nights);
+        LocalDate checkOut = incrementDate(checkIn, nights);
 
         // calculate total cost of stay based on bedCost and # of nights
         double total = bedCost * nights;
@@ -122,7 +122,7 @@ public class Main {
     }
 
     // method: increment dates for check-out calculation
-    public static LocalDate IncrementDate(LocalDate initialDate, int daysToIncrement) {
+    public static LocalDate incrementDate(LocalDate initialDate, int daysToIncrement) {
         LocalDate incrementedDate = initialDate.plusDays(daysToIncrement);
         return incrementedDate;
     }
@@ -163,5 +163,9 @@ public class Main {
             System.out.println(totalReservations);
         }
 
+    }
+
+    private void doNothing() {
+        System.out.println("This method cannot be called outside of this class.");
     }
 }
