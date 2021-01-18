@@ -20,10 +20,10 @@ public class testModels {
         room.setBed(bedSize);
         room.setHasKitchenette(hasKitchenette);
         room.setPrice(roomPrice);
-        room.setNubmerOfBeds(numberOfBeds);
+        room.setNumberOfBeds(numberOfBeds);
 
         assertEquals(room.getBed(), bedSize);
-        assertEquals(room.getNubmerOfBeds(), numberOfBeds);
+        assertEquals(room.getNumberOfBeds(), numberOfBeds);
         assertEquals(room.getPrice(), roomPrice, .01);
         assertEquals(room.hasKitchenette(), hasKitchenette);
     }

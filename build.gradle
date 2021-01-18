@@ -47,6 +47,7 @@ buildscript {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-data-mongodb')
     implementation('org.springframework.boot:spring-boot-starter-actuator')
 //    testCompile group: 'net.digitaltsunami', name: 'pojot', version: "${pojotVersion}"
     testCompile group: 'org.hamcrest', name: 'hamcrest-core', version: "${hamcrestVersion}"
