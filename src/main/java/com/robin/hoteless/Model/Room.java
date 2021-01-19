@@ -3,7 +3,7 @@ package com.robin.hoteless.Model;
 public class Room {
     private double price;
     private String bed;
-    private int nubmerOfBeds;
+    private int numberOfBeds;
     private boolean hasKitchenette;
 
     public double getPrice() {
@@ -24,12 +24,12 @@ public class Room {
         return this;
     }
 
-    public int getNubmerOfBeds() {
-        return nubmerOfBeds;
+    public int getNumberOfBeds() {
+        return numberOfBeds;
     }
 
-    public Room setNubmerOfBeds(int nubmerOfBeds) {
-        this.nubmerOfBeds = nubmerOfBeds;
+    public Room setNumberOfBeds(int numberOfBeds) {
+        this.numberOfBeds = numberOfBeds;
         return this;
     }
 
