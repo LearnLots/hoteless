@@ -1,4 +1,6 @@
-package com.robin.hoteless;
+package com.robin.hoteless.application;
+
+import com.robin.hoteless.model.Reservation;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -7,11 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Main {
-
-//    public static void main(String[] args) {
-//        bookRoom();
-//    }
+public class BookingTool {
 
     public static void bookRoom() {
         Double bedCost;

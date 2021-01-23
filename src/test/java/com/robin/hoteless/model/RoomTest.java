@@ -1,11 +1,11 @@
-package com.robin.hoteless;
+package com.robin.hoteless.model;
 
-import com.robin.hoteless.Model.Room;
+import com.robin.hoteless.model.Room;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class testModels {
+public class RoomTest {
 
     @Test
     public void testOutput() {

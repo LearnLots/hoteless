@@ -1,4 +1,4 @@
-package com.robin.hoteless.App;
+package com.robin.hoteless.api;
 
 public class Greeting {
     private final long id;

@@ -1,6 +1,6 @@
-package com.robin.hoteless.Controllers;
+package com.robin.hoteless.controllers;
 
-import com.robin.hoteless.App.Greeting;
+import com.robin.hoteless.api.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

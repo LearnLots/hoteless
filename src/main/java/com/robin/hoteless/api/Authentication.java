@@ -1,6 +1,6 @@
-package com.robin.hoteless.App;
+package com.robin.hoteless.api;
 
-import com.robin.hoteless.Configuration.AwsConfig;
+import com.robin.hoteless.configuration.AwsConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
