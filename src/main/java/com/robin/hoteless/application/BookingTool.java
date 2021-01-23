@@ -115,7 +115,16 @@ public class BookingTool {
             System.out.println("Your reservation has been confirmed!");
 
             // print reservation confirmation including reservation id
-            newReservation.show();
+            System.out.printf("Your room has been booked under reservation #%s!\n" +
+            "We've reserved a %s room for %d days starting on %s and ending on %s\n" +
+            "Based on a daily rate of %s, your initial cost estimate is $%.2f",
+                newReservation.getId(),
+                newReservation.getRoomType(),
+                newReservation.getLengthOfStay(),
+                newReservation.getCheckInDate(),
+                newReservation.getCheckOutDate(),
+                newReservation.getDailyRate(),
+                newReservation.getPreCheckInCostEstimate());
         }
     }
 

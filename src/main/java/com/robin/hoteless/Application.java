@@ -1,12 +1,12 @@
-package com.robin.hoteless.application;
+package com.robin.hoteless;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProgramEntryPoint {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProgramEntryPoint.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

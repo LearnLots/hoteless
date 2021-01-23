@@ -1,4 +1,5 @@
 package com.robin.hoteless.controllers;
+
 import com.robin.hoteless.model.User;
 import com.robin.hoteless.repository.UserRepository;
 import com.robin.hoteless.service.UserService;
@@ -14,9 +15,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
-//    @Autowired
-//    private UserRepository userRepository;
 
     @GetMapping("/")
     public List<User> getAll() {

@@ -5,41 +5,41 @@ import java.util.Date;
 
 public class Reservation {
     private int id;
-    private Date reservationCreationDate;
+    private Date creationDate;
     private int lengthOfStay;
     private double dailyRate;
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
     private String roomType;
-    private double totalCostOfStay;
+    private double preCheckInCostEstimate;
     private static int totalReservations;
 
-    public Reservation(Date reservationCreationDate,
+    public Reservation(Date creationDate,
                        int lengthOfStay,
                        LocalDate checkInDate,
                        LocalDate checkOutDate,
                        double dailyRate,
                        String roomType,
-                       double totalCostOfStay) {
+                       double preCheckInCostEstimate) {
         this.id = totalReservations + 10000;
-        this.reservationCreationDate = reservationCreationDate;
+        this.creationDate = creationDate;
         this.lengthOfStay = lengthOfStay;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.dailyRate = dailyRate;
         this.roomType = roomType;
-        this.totalCostOfStay = totalCostOfStay;
+        this.preCheckInCostEstimate = preCheckInCostEstimate;
         this.totalReservations++;
     }
 
-    public void show() {
-        System.out.printf(
-                "   - Your confirmation number is %s.\n" +
-                        "   - We've reserved a %s room for %d days starting on %s and ending on %s\n" +
-                        "   - Based on your daily rate of %s, the total cost of your stay will be $%.2f \n",
-                id, roomType, lengthOfStay, checkInDate, checkOutDate, dailyRate, totalCostOfStay);
-
-    }
+//    public void show() {
+//        System.out.printf(
+//                "   - Your confirmation number is %s.\n" +
+//                        "   - We've reserved a %s room for %d days starting on %s and ending on %s\n" +
+//                        "   - Based on your daily rate of %s, the total cost of your stay will be $%.2f \n",
+//                id, roomType, lengthOfStay, checkInDate, checkOutDate, dailyRate, preCheckInCostEstimate);
+//
+//    }
 
     static void showReservations() {
         System.out.println(totalReservations);
@@ -53,12 +53,12 @@ public class Reservation {
         this.id = id;
     }
 
-    public Date getReservationCreationDate() {
-        return reservationCreationDate;
+    public Date getCreationDate() {
+        return creationDate;
     }
 
-    public void setReservationCreationDate(Date reservationCreationDate) {
-        this.reservationCreationDate = reservationCreationDate;
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
     public int getLengthOfStay() {
@@ -101,12 +101,12 @@ public class Reservation {
         this.roomType = roomType;
     }
 
-    public double getTotalCostOfStay() {
-        return totalCostOfStay;
+    public double getPreCheckInCostEstimate() {
+        return preCheckInCostEstimate;
     }
 
-    public void setTotalCostOfStay(double totalCostOfStay) {
-        this.totalCostOfStay = totalCostOfStay;
+    public void setPreCheckInCostEstimate(double preCheckInCostEstimate) {
+        this.preCheckInCostEstimate = preCheckInCostEstimate;
     }
 
     public static int getTotalReservations() {
@@ -115,5 +115,19 @@ public class Reservation {
 
     public static void setTotalReservations(int totalReservations) {
         Reservation.totalReservations = totalReservations;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "id=" + id +
+                ", reservationCreationDate=" + creationDate +
+                ", lengthOfStay=" + lengthOfStay +
+                ", dailyRate=" + dailyRate +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                ", roomType='" + roomType + '\'' +
+                ", totalCostOfStay=" + preCheckInCostEstimate +
+                '}';
     }
 }
