@@ -1,4 +1,4 @@
-package com.robin.hoteless.Model;
+package com.robin.hoteless.model;
 
 public class Room {
     private double price;

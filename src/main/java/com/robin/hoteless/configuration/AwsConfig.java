@@ -1,6 +1,6 @@
-package com.robin.hoteless.Configuration;
+package com.robin.hoteless.configuration;
 
-import com.robin.hoteless.Model.AwsStuffNeeded;
+import com.robin.hoteless.model.AwsStuffNeeded;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

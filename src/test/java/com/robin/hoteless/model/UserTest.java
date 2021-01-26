@@ -1,7 +1,6 @@
-package com.robin.hoteless.Model;
+package com.robin.hoteless.model;
 
 import junit.framework.TestCase;
-import com.robin.hoteless.Model.User;
 import org.junit.Test;
 
 public class UserTest extends TestCase {

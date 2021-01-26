@@ -1,4 +1,4 @@
-package com.robin.hoteless.Model;
+package com.robin.hoteless.model;
 
 public class AwsStuffNeeded {
     private String userName;
@@ -9,9 +9,7 @@ public class AwsStuffNeeded {
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
-    }
+    public String getUserName() { return userName; }
 
     public AwsStuffNeeded setUserName(String userName) {
         this.userName = userName;

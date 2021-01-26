@@ -1,6 +1,6 @@
-package com.robin.hoteless.Controllers;
+package com.robin.hoteless.controllers;
 
-import com.robin.hoteless.App.Authentication;
+import com.robin.hoteless.api.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class HotelessController {
+public class BookingToolController {
 
     @Autowired
     Authentication authentication;
